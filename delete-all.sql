@@ -1,1 +1,1 @@
-DELETE FROM artists WHERE Name = 'Reggae';
+DELETE FROM artists;
