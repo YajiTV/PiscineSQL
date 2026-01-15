@@ -1,1 +1,1 @@
-ALTER TABLE genres RENAME COLUMN "Hip Hop/Rap" TO Rap;
+ALTER TABLE genres RENAME COLUMN 'Hip Hop/Rap' TO Rap;
