@@ -1,1 +1,1 @@
-DELETE FROM genre WHERE Name = 'Reggae';
+DELETE FROM genres WHERE Name = 'Reggae';
