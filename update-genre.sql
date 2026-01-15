@@ -1,1 +1,1 @@
-ALTER TABLE genres RENAME COLUMN 'Hip Hop/Rap' TO Rap;
+UPDATE genres SET Name = 'Rap' WHERE Name = 'Hip Hop/Rap';
