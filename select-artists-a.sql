@@ -1,3 +1,3 @@
 SELECT *
-FROM Artist
+FROM artists
 WHERE Name LIKE 'A%';
