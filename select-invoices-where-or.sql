@@ -1,3 +1,3 @@
 SELECT InvoiceId, Total
 FROM invoices
-WHERE destination = 'Paris' OR destination = 'London'
+WHERE City = 'Paris' OR City = 'London'
