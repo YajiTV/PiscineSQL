@@ -1,3 +1,4 @@
 SELECT * 
 FROM invoices
-WHERE InvoiceId <=15;
+ORDER BY InvoiceDate DESC
+LIMIT 15;
