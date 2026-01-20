@@ -1,4 +1,4 @@
-SELECT DISTINCT
+SELECT
   t.Name AS TrackName,
   p.Name AS PlaylistName
 FROM playlist_track AS pt
