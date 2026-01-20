@@ -7,5 +7,5 @@ JOIN playlists AS p
 JOIN tracks AS t
   ON t.TrackId = pt.TrackId
 WHERE p.Name = 'TV Shows'
-ORDER BY t.Name ASC, p.Name ASC
+ORDER BY pt.TrackId ASC
 LIMIT 100;
