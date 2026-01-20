@@ -1,7 +1,7 @@
 SELECT DISTINCT
   t.Name AS TrackName,
   p.Name AS PlaylistName
-FROM playlist_tracks AS pt
+FROM playlist_track AS pt
 JOIN playlists AS p
   ON p.PlaylistId = pt.PlaylistId
 JOIN tracks AS t
