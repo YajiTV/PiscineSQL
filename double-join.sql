@@ -1,11 +1,9 @@
-SELECT
-  t.Name AS TrackName,
-  p.Name AS PlaylistName
-FROM playlist_track AS pt
-JOIN playlists AS p
-  ON p.PlaylistId = pt.PlaylistId
-JOIN tracks AS t
-  ON t.TrackId = pt.TrackId
-WHERE p.Name = 'TV Shows'
-ORDER BY pt.TrackId ASC
+SELECT DISTINCT
+playlists.Name AS PlaylistName,
+tracks.Name AS TrackName
+FROM 
+    playlists
+INNER JOIN playlist_track ON playlists.PlaylistId = playlist_track.PlaylistId
+INNER JOIN tracks ON tracks.TrackId = playlist_track.TrackId
+WHERE PlaylistName = 'TV Shows' 
 LIMIT 100;
