@@ -1,3 +1,3 @@
 SELECT *
 FROM customers
-WHERE Company = 'Microsoft Corporation' --Bonjour
+WHERE Company = 'Microsoft Corporation';
