@@ -1,5 +1,5 @@
 SELECT 
-    UPPER(c.FirstName || ' ' || c.LastName) AS FullName, 
+    c.FirstName || ' ' || UPPER(c.LastName) AS FullName, 
     SUM(i.Total) AS AllInvoices
 FROM customers c 
 JOIN invoices i ON c.CustomerId = i.CustomerId
