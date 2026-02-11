@@ -1,5 +1,6 @@
-SELECT UPPER(FirstName || ' ' || LastName) AS FullName, COUNT(InvoiceId) AS AllInvoices
+SELECT UPPER(FirstName || ' ' || LastName) AS FullName, SUM(i.InvoiceId) AS AllInvoices
 FROM customers
-JOIN invoices USING (CustomerId)
-GROUP BY FullName
-ORDER BY AllInvoices DESC, FullName;
+JOIN invoices i ON c.CustomerId = i.CustomerId
+GROUP BY c.CustomerId
+HAVING SUM(i.InvoiceId) > 38
+ORDER BY FullName ASC;
