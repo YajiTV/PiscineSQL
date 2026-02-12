@@ -1,9 +1,9 @@
 SELECT t.Name
-FROM Track t
+FROM tracks t
 INNER JOIN InvoiceLine il ON t.TrackId = il.TrackId
 WHERE il.InvoiceId = (
     SELECT InvoiceId
-    FROM Invoice
+    FROM invoices
     ORDER BY InvoiceDate DESC
     LIMIT 1
 );
