@@ -1,7 +1,7 @@
 SELECT artists.Name AS ArtistName, 
        albums.Title AS AlbumName, 
        tracks.Name AS TrackName, 
-       ROUND(tracks.Bytes / 1000000, 2) || ' MB' AS MegaBytes
+       ROUND(tracks.Bytes / 1000000, 4) || ' MB' AS MegaBytes
 FROM tracks
 JOIN albums ON tracks.AlbumId = albums.AlbumId
 JOIN artists ON albums.ArtistId = artists.ArtistId
