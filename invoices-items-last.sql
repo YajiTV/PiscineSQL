@@ -1,7 +1,7 @@
 SELECT t.Name
 FROM tracks t
-INNER JOIN InvoiceLine il ON t.TrackId = il.TrackId
-WHERE il.InvoiceId = (
+INNER JOIN invoice_items ii ON t.TrackId = ii.TrackId
+WHERE ii.InvoiceId = (
     SELECT InvoiceId
     FROM invoices
     ORDER BY InvoiceDate DESC
