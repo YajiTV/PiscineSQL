@@ -8,4 +8,5 @@ SELECT artists.Name,
 FROM artists
 LEFT JOIN albums ON artists.ArtistId = albums.ArtistId
 GROUP BY artists.ArtistId, artists.Name
+HAVING COUNT(albums.AlbumId) > 0
 LIMIT 100;
